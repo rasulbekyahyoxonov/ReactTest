@@ -1,38 +1,317 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --blue: #217BF4;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+input:focus {
+    outline: none;
+}
+button {
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight:  400;
+}
+.main-section {
+    background-image: url('pictures/base.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    width: 1400px;
+    margin: 0 auto;
+}
+.header {
+    width: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.103);
+    z-index: 9999;
+    transition: .3s ease;
+}
+.header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 32px 0 rgb(0 0 0 / 13%);
+    border-bottom: 1px solid rgba(153, 153, 153, 0.226);
+    z-index: 9999;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .left {
+    display: flex;
+}
+.header .container .left img {
+    margin-right: 50px;
+    height: 40px;
+}
+.header-ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.header-ul li {
+    list-style-type: none;
+    float: left;
+}
+.header-ul li a {
+    text-decoration: none;
+    color: #656464;
+}
+.active-a {
+    color: #000 !important;
+}
+/* right */
+.right {
+    display: flex;
+}
+.search-input {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #E5E5E5;
+}
+.search-input img {
+    height: 12px;
+}
+#search {
+    height: 100%;
+    width: 120px;
+    padding: 0 10px;
+    background: none;
+    border: none;
+}
+#search:focus .search-input {
+    border-color: var(--blue);
+}
+.button-div {
+    margin-left: 20px;
+}
+.login-btn {
+    color: #fff;
+    width: 123px;
+    height: 50px;
+    font-weight: 600;
+    background-color: var(--blue);
+    border-radius: 14px;
+    cursor: pointer;
+}
+/* main-title */
+
+.main-title {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 0;
+}
+.main-title .container {
+    display: flex;
+}
+.left-title{
+    text-align: left;
+}
+.left-title,
+.right-img {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.comunity-btn {
+    width: 177px;
+    height: 40px;
+    background-color: #217cf423;
+    color: var(--blue);
+    border-radius: 8px;
+    font-weight: 700;
+}
+.left-title h1{
+    font-size: 56px;
+    line-height: 66px;
+    font-weight: 700;
+    padding: 15px 0;
+}
+.left-title p {
+    color: #656464;
+    font-size: 18px;
+    line-height: 28px;
+    margin-right: 200px;
+    margin-bottom: 35px;
+}
+.more-btn button{
+    width: 162px;
+    height: 62px;
+}
+.about-btn {
+    font-weight: 400;
+    font-size: 14px;
+    transition: .1s ease;
+}
+.invite-btn {
+    background-color: transparent;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    margin-left: 15px;
+    transition: .1s ease;
+}
+.invite-btn:hover {
+    background-color: var(--blue);
+    color: #fff;
+}
+/* right-img */
+.right-img img {
+    width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* section2 */
+
+.section2 {
+    padding-top: 120px;
+}
+.section2 .container {
+    display: flex;
+}
+.section2 .container > div {
+    width: 50%;
+}
+.left-social {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.all-p {
+    font-size: 18px;
+    line-height: 18px;
+    color: var(--blue);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.all-h1 {
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 700;
+    padding-right: 250px;
+    margin-bottom: 20px;
+}
+.all-h4 {
+    font-size: 16px;
+    line-height: 28px;
+    color: #656464;
+    font-weight: 400;
+    padding-right: 270px;
+    margin-bottom: 30px;
+}
+.group-div {
+    display: flex;
+    flex-direction: column;
+}
+.group-div > div {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.group-div > div img {
+    margin-right: 10px;
+    width: 10px;
+}
+.group-div > div span {
+    color: #171648;
+    font-size: 18px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.right-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+.social-card {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.social-card img {
+    cursor: pointer;
+}
+.social-one {
+    display: flex;
+    align-items: center;
+}
+.social-two {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.social-two > div {
+    border-radius: 14px;
+    overflow: hidden;
+}
+.social-two > div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* section3 */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section3 {
+    padding-top: 120px;
+    padding-bottom: 200px;
+}
+.section3 .container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.rating-card {
+    width: 336px;
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid rgba(185, 185, 185, 0.12);
+}
+.mini-rating {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.mini-rating img {
+    margin-right: 15px;
+}
+.mini-rating span {
+    font-size: 20px;
+}
+.people-img {
+    transform: translateX(-20px);
+    margin-right: 0 !important;
+}
+.mini-rating .span-raiting {
+    font-size: 16px;
+}
+.all-p2 {
+    color: #6564648f !important;
+    line-height: 25px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.join-p {
+    color: rgba(74, 74, 86, 1);
+}
+.all-h1-two,
+.all-h4-two {
+    padding-right: 0px !important;
 }
