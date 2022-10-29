@@ -7,7 +7,9 @@ import Section3 from "./components/Section3/Section3"
 function App() {
   return (
     <div>
-      <MainSection />
+      <div >
+        <MainSection />
+      </div>
       <Section2 />
       <Section3 />
     </div>

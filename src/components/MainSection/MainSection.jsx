@@ -6,7 +6,7 @@ import Image from '../../pictures/Iamge.png';
 const MainSection = () => {
     return (
         <>
-        <section className="main-section">
+        <section className="main-section bg-slate-100 flex rounded-3xl">
             <header className="header">
                 <div className="container">
                     <div className="left">
