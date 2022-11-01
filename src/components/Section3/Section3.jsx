@@ -8,6 +8,7 @@ import pictures6 from '../../pictures/ArrowRight.png';
 
 
 const Section3 = () => {
+    
     return (
         <>
         <section className="section3">
