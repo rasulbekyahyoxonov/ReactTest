@@ -10,7 +10,6 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    padding: 20px;
 }
 input:focus {
     outline: none;
@@ -326,13 +325,19 @@ button {
 .main-div {
     display: flex;
     justify-content: space-around;
+    gap: 20px;
 }
 .card {
     width: 440px;
     background-color: #fff;
     border-radius: 14px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.271);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.271);
     overflow: hidden;
+    cursor: pointer;
+    transition: .2s ease;
+}
+.card:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.371);
 }
 .card-title {
     padding: 15px;
@@ -365,8 +370,23 @@ button {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    transition: .15s ease;
+}
+.card-title button:hover {
+    padding-right: 25px;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    background-color: #000;
+}
+.card-title button:active {
+    transform: scale(0.97);
+    transition: none;
+}
+.card-title button:hover > svg {
+    transform: translateX(6px);
 }
 .card-title button svg {
     width: 16px;
     margin-left: 5px;
+    transition: .15s ease;
 }
